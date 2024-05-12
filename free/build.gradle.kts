@@ -10,6 +10,8 @@ repositories {
     //mavenLocal()
     maven { url = uri("https://repo.ajg0702.us/releases/") }
     maven { url = uri("https://oss.sonatype.org/content/repositories/snapshots") }
+    maven { url = uri("https://repo.clojars.org/")}
+
     mavenCentral()
 }
 
@@ -17,6 +19,8 @@ dependencies {
     compileOnly("net.kyori:adventure-api:4.13.1")
     compileOnly("com.google.guava:guava:30.1.1-jre")
     compileOnly("org.spongepowered:configurate-yaml:4.0.0")
+
+    implementation("com.github.puregero:multilib:1.1.13")
 
     implementation("us.ajg0702:ajUtils:1.2.14")
 
@@ -27,6 +31,7 @@ dependencies {
 }
 
 tasks.shadowJar {
+    relocate("com.github.puregero.multilib", "us.ajg0702.queue.multilib")
     relocate("us.ajg0702.utils", "us.ajg0702.queue.libs.utils")
     relocate("org.bstats", "us.ajg0702.queue.libs.bstats")
     //relocate("net.kyori", "us.ajg0702.queue.libs.kyori")

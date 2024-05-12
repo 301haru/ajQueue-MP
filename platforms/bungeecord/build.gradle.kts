@@ -10,6 +10,7 @@ repositories {
     maven { url = uri("https://repo.ajg0702.us/releases/") }
     maven { url = uri("https://nexus.velocitypowered.com/repository/maven-public/") }
     maven { url = uri("https://repo.viaversion.com/") }
+    maven { url = uri("https://repo.clojars.org/")}
     mavenCentral()
 }
 
@@ -24,6 +25,8 @@ dependencies {
 
     implementation("net.kyori:adventure-platform-bungeecord:4.0.0")
     compileOnly("net.kyori:adventure-text-serializer-plain:4.13.1")
+
+    implementation("com.github.puregero:multilib:1.1.13")
 
     compileOnly("com.viaversion:viaversion-api:4.3.1")
 

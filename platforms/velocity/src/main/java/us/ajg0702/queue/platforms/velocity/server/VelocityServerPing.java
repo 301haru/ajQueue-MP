@@ -1,5 +1,6 @@
 package us.ajg0702.queue.platforms.velocity.server;
 
+import com.velocitypowered.api.proxy.server.RegisteredServer;
 import com.velocitypowered.api.proxy.server.ServerPing;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.serializer.plain.PlainTextComponentSerializer;
@@ -8,10 +9,12 @@ import us.ajg0702.queue.api.server.AdaptedServerPing;
 public class VelocityServerPing implements AdaptedServerPing {
 
     private final ServerPing handle;
+    private final RegisteredServer handle2;
     private final long sent;
-    public VelocityServerPing(ServerPing handle, long sent) {
+    public VelocityServerPing(ServerPing handle, long sent, RegisteredServer handle2) {
         this.handle = handle;
         this.sent = sent;
+        this.handle2 = handle2;
     }
 
     @Override
@@ -28,7 +31,7 @@ public class VelocityServerPing implements AdaptedServerPing {
 
     @Override
     public int getPlayerCount() {
-        return handle.getPlayers().map(ServerPing.Players::getOnline).orElse(0)+add;
+        return handle2.getPlayersConnected().size();
     }
 
     @Override

@@ -54,7 +54,7 @@ public class VelocityServer implements AdaptedServer {
         serverPing.thenRunAsync(() -> {
             VelocityServerPing ping;
             try {
-                ping = new VelocityServerPing(serverPing.get(), sent);
+                ping = new VelocityServerPing(serverPing.get(), sent, handle);
             } catch (Throwable e) {
                 markOffline(debug, logger, future, sent, e);
                 return;

@@ -10,6 +10,7 @@ repositories {
     maven { url = uri("https://repo.ajg0702.us/releases/") }
     maven { url = uri("https://repo.papermc.io/repository/maven-public/") }
     maven { url = uri("https://repo.viaversion.com/") }
+    maven { url = uri("https://repo.clojars.org/")}
     mavenCentral()
 }
 
@@ -21,6 +22,8 @@ dependencies {
     compileOnly("com.velocitypowered:velocity-api:3.1.1")
     annotationProcessor("com.velocitypowered:velocity-api:3.1.1")
     implementation("net.kyori:adventure-text-minimessage:4.10.0")
+
+    implementation("com.github.puregero:multilib:1.1.13")
 
     compileOnly("com.viaversion:viaversion-api:4.3.1")
 

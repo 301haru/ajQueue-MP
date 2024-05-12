@@ -1,12 +1,13 @@
 plugins {
     java
-    id("com.github.johnrengelman.shadow").version("6.1.0")
+    id("com.github.johnrengelman.shadow").version("7.1.2")
     `maven-publish`
 }
 
 repositories {
     maven { url = uri("https://repo.ajg0702.us/releases/") }
     maven { url = uri("https://oss.sonatype.org/content/repositories/snapshots") }
+    maven { url = uri("https://repo.clojars.org/")}
 
     mavenCentral()
 }
@@ -17,7 +18,7 @@ allprojects {
 
     plugins.apply("java")
     java {
-        sourceCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_17
     }
 
     tasks.withType<Test>().configureEach {
@@ -38,6 +39,7 @@ allprojects {
 dependencies {
     testImplementation("junit:junit:4.12")
 
+    implementation("com.github.puregero:multilib:1.1.13")
     implementation(project(":free"))
 }
 
