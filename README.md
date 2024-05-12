@@ -2,7 +2,7 @@
 
 ajQueue-MP supports MultiPaper environment. It fixes the isuue that the plugin only sends player to the first multipaper server. 
 
-
+CAUTION: There may be errors. It is designed to work only under certain circumstances.
 
 # ajQueue
 
