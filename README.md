@@ -1,8 +1,11 @@
+## https://github.com/MultiPaper/only-local-players-in-ping
+use this instead.
+
 # ajQueue-MP
 
-ajQueue-MP supports MultiPaper environment. It fixes the isuue that the plugin only sends player to the first multipaper server. 
+~ajQueue-MP supports MultiPaper environment. It fixes the isuue that the plugin only sends player to the first multipaper server.~
 
-CAUTION: There may be errors. It is designed to work only under certain circumstances.
+~CAUTION: There may be errors. It is designed to work only under certain circumstances.~
 
 # ajQueue
 
